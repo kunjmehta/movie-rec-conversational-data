@@ -1,9 +1,28 @@
-# Knowledge_Aware_Conversatinoal_Recommendation_System
+# Movie Recommendation from Conversational Data: ConvExtr
+Re-implementation and extension of the ACL paper [You Sound Like Someone Who Watches Drama Movies: Towards Predicting Movie Preferences from Conversational Interactions](https://aclanthology.org/2021.naacl-main.246/)
 
-Recommendation engines in general, and movie recommendations in particular have become a staple of our life with over-the-top streaming services constantly recommending us movies to watch. Now, to add to this we have a proliferation of home devices and home assistants like Amazon Alexa and Apple Siri, which gives us access to a ton of conversational data. This conversational data can be used to extract information that can then be used to recommend movies to users through these home devices. 
+-----------------------------------------
+### Work Done
 
-(Volokhin et al., 2021) introduce a dataset for recommeding movies from conversational data, and publish baseline results for the same. The problem that they solve can be formally stated as: Given a conversational database between two users (out of one which simulates a conversational personal assistant) with k turns and m movie references, to predict the user's (m + 1)st movie preference. This is done by inferring user sentiment towards the m = 2 movies from the conversation and then using collaborative filtering and domain adaptation to find ratings of "similar" external critics reviews and use them to make the m+1^st movie preference prediction for the user. 
+* Obtained a 3% improvement on existing results of the paper and performed hyperparameter tuning on all the three CF approaches: KNN, SVD and SVDpp.
+* Experimented with neural CF approaches employing Neural Matrix Factorization as an extension of the paper and obtained comparable results of RMSE=1.232 and MAE=0.9569 
 
-This approach is a first of its kind in that it solely works on conversational data, which in itself is not available freely enough. Traditional approaches to recommending movies that use either of collaborative or content filtering techniques would need extracted information from the conversation data to serve recommendations. By incorporating preferences of other, external users with established preferences (critics), via shared discussed entities, and the user’s sentiment towards them, we also address the ”cold start” problem that traditional recommendation systems face with new/unknown users. 
+***
 
-This is what (Volokhin et al., 2021) does: it extracts the relevant information entities from the well-formed conversation data, cleans it to be in accordance with the problem statement defined above and serves recommendations using collaborative filtering techniques like KNN, SVD and SVDpp. In this project, we replicate the approach in (Volokhin et al., 2021) using the same dataset. After that, we go a step further and apply neural collaborative filtering on the data to try and better the results obtained in the paper. For all of the approaches we also perform hyperparameter optimization. 
+### Tech Stack
+
+* Python 3
+* surprise
+* Microsoft Recommenders Framework
+* seaborn
+
+***
+
+### Report and Presentation 
+
+You can access the report [here](https://share.streamlit.io/kunjmehta/fpl-teammaker-heroku/2021/22/app.py) and presentation [here](url)
+
+### Structure and Acknowledgements 
+The file "NLP_Project_Step1.ipynb" contains code for the re-implementation and hyperparameter tuning to obtain results published in the paper. The file "NLP_Project_Step2.ipynb" also contains code where the NCF extension is applied.
+
+Made as a team with [@janish-parikh](https://github.com/janish-parikh) and Jash Gaglani.
