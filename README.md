@@ -20,7 +20,7 @@ Re-implementation and extension of the ACL paper [You Sound Like Someone Who Wat
 
 ### Report and Presentation 
 
-You can access the report [here](https://share.streamlit.io/kunjmehta/fpl-teammaker-heroku/2021/22/app.py) and presentation [here](url)
+You can access the report [here](https://github.com/kunjmehta/movie-rec-conversational-data/blob/main/NLP_Final_Report.pdf) and presentation [here.](https://github.com/kunjmehta/movie-rec-conversational-data/blob/main/NLP-Final-Presentation.pptx.pdf)
 
 ### Structure and Acknowledgements 
 The file "NLP_Project_Step1.ipynb" contains code for the re-implementation and hyperparameter tuning to obtain results published in the paper. The file "NLP_Project_Step2.ipynb" also contains code where the NCF extension is applied.
